@@ -1,9 +1,9 @@
 #include <stdio.h>
-
 /**
- * main - prints the name of the file
- *
- * Return: Always 0 (Success)
+ * main - Program compilation starts from the main
+ * Description: this program prints the name of the file it was comipiled from
+ * author: sammykingx
+ * Return: 0 (success)
  */
 int main(void)
 {

@@ -1,23 +1,20 @@
-#include "function_pointers.h"
 #include <stdio.h>
+#include "function_pointers.h"
 /**
- * array_iterator - prints each array elem on a newl
- * @array: array
- * @size: how many elem to print
- * @action: pointer to print in regular or hex
- * Return: void
+ * array_iterator - calls a function to act on array elements
+ * @array: Name of the array in which the function acts on.
+ * @size: size of the passed array to function
+ * @action: the function that acts on the array elements
+ * Author: sammykingx
+ * Return: no return cause we've declared VOID
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
-	{
-		unsigned int i;
+{
+	unsigned int i;
 
+	if (!array || !action)
+		return;
 
-		if (array == NULL || action == NULL)
-			return;
-
-
-		for (i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
-	}
+	for (i = 0; i < size; i++)
+		action(array[i]);
+}
